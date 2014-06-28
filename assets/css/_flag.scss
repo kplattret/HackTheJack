@@ -1,0 +1,222 @@
+/* ==========================================================================
+    Union-Jack flag
+   ========================================================================== */
+
+
+.text-title {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -81px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 162px;
+    @include font-size(5, 16.2);
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.union-jack {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin: -243px auto 0;
+    width: 960px;
+    height: 484px;
+    border: 1px solid #DDDDDD;
+    overflow: hidden;
+
+    .bg-colour {
+        width: 100%;
+        height: 100%;
+
+        &.black {
+            display: none;
+            background: #000000;
+        }
+
+        &.blue {
+            background: #003399;
+        }
+    }
+
+    .holder {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        // @include opacity (8);
+
+        & > * {
+            position: absolute;
+        }
+
+        .top-left-white {
+            top: 62px;
+            left: -28px;
+            width: 500px;
+            height: 100px;
+            background: #FFFFFF;
+            @include rotation(26.8);
+        }
+
+        .top-right-white {
+            top: 62px;
+            right: -28px;
+            width: 500px;
+            height: 100px;
+            background: #FFFFFF;
+            @include rotation(-26.8);
+        }
+
+        .bottom-right-white {
+            bottom: 62px;
+            right: -28px;
+            width: 500px;
+            height: 100px;
+            background: #FFFFFF;
+            @include rotation(26.8);
+        }
+
+        .bottom-left-white {
+            bottom: 62px;
+            left: -28px;
+            width: 500px;
+            height: 100px;
+            background: #FFFFFF;
+            @include rotation(-26.8);
+        }
+
+        .top-left-blue {
+            top: 108px;
+            left: -40px;
+            width: 500px;
+            height: 34px;
+            background: #003399;
+            @include rotation(26.8);
+        }
+
+        .top-right-blue {
+            top: 70px;
+            right: -40px;
+            width: 500px;
+            height: 34px;
+            background: #003399;
+            @include rotation(-26.8);
+        }
+
+        .bottom-right-blue {
+            bottom: 108px;
+            right: -40px;
+            width: 500px;
+            height: 34px;
+            background: #003399;
+            @include rotation(26.8);
+        }
+
+        .bottom-left-blue {
+            bottom: 70px;
+            left: -40px;
+            width: 500px;
+            height: 34px;
+            background: #003399;
+            @include rotation(-26.8);
+        }
+
+        .top-left-blue.red {
+            background: #CC0000;
+        }
+
+        .top-right-blue.red {
+            background: #CC0000;
+        }
+
+        .bottom-right-blue.red {
+            background: #CC0000;
+        }
+
+        .bottom-left-blue.red {
+            background: #CC0000;
+        }
+
+        .vertical-white {
+            top: 0;
+            left: 50%;
+            margin-left: -80px;
+            width: 160px;
+            height: 100%;
+            background: #FFFFFF;
+            border: none;
+        }
+
+        .horizontal-white {
+            top: 50%;
+            left: 0;
+            margin-top: -81px;
+            width: 100%;
+            height: 162px;
+            background: #FFFFFF;
+            border: none;
+        }
+
+        .top {
+            top: 0;
+        }
+
+        .bottom {
+            bottom: 0;
+        }
+
+        .vertical-blue {
+            left: 50%;
+            margin-left: -50px;
+            width: 100px;
+            height: 193px;
+            background: #003399;
+            border: none;
+        }
+
+        .horizontal-blue {
+            top: 50%;
+            left: 0;
+            margin-top: -49px;
+            width: 100%;
+            height: 98px;
+            background: #003399;
+            border: none;
+        }
+
+        .vertical-red {
+            left: 50%;
+            margin-left: -50px;
+            width: 100px;
+            height: 193px;
+            background: #CC0000;
+            border: none;
+        }
+
+        .horizontal-red {
+            top: 50%;
+            left: 0;
+            margin-top: -49px;
+            width: 100%;
+            height: 98px;
+            background: #CC0000;
+            border: none;
+        }
+
+        .text-intro {
+            display: none;
+            top: 50%;
+            left: 0;
+            margin-top: -81px;
+            margin-bottom: 0;
+            width: 100%;
+            height: 162px;
+            @include font-size(5, 16.2);
+            font-weight: bold;
+            color: #003399;
+            text-align: center;
+        }
+    }
+}

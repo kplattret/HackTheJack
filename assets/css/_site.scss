@@ -1,0 +1,307 @@
+/* ==========================================================================
+    SASS variables
+   ========================================================================== */
+
+$path-to-images:    "../img";
+
+$font-body:         "Helvetica", sans-serif;
+$font-title:        "Verdana", sans-serif;
+$font-code:         "Courier New", monospace;
+
+$colour-alpha:      #333; // Body text colour
+$colour-beta:       #085d84; // Titles colour
+$colour-links:      #085d84; // Links colour
+$colour-hover:      #4086a6; // Hover state colour
+
+
+/* ==========================================================================
+    Generic elements
+   ========================================================================== */
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%; // Equals to 10px
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    color: $colour-alpha;
+    background: #fff;
+    font: 1.6rem/1.4 $font-body;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+.button {
+    -webkit-font-smoothing: antialiased;
+}
+
+p,
+ul,
+ol,
+pre {
+    margin: 0 0 2.4rem;
+}
+
+p {
+    padding: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+code,
+pre {
+    padding: 0 3px;
+    font-family: $font-code;
+    background: #eee;
+    border: 1px solid #ddd;
+    @include border-radius(2);
+}
+
+pre {
+    padding: 2rem 0 0;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
+}
+
+hr {
+    width: 100%;
+    margin: 2.5rem auto;
+    border-top: 1px solid #ccc;
+}
+
+.to-left {
+    text-align: left;
+}
+
+.to-right {
+    text-align: right;
+}
+
+@include selection-colour(#d1dfe4);
+
+a,
+:link,
+:visited {
+    color: $colour-links;
+    text-decoration: none;
+} 
+
+a:hover,
+a.active {
+    color: $colour-hover;
+    text-decoration: none;
+}
+
+[href^="mailto:"] {
+    white-space: nowrap;
+}
+
+a {
+    @include transition(all, .4s, ease);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 .6em;
+    font-family: $font-title;
+    font-weight: normal;
+    font-style: normal;
+    color: $colour-beta;
+}
+
+h1 {
+    @include font-size(5.6);
+}
+
+h2 {
+    margin: 3.8rem 0 2.8rem;
+    @include font-size(2.8);
+}
+
+h3 {
+    @include font-size(2.2);
+}
+
+
+/* ==========================================================================
+    Form controls
+   ========================================================================== */
+
+form {
+    fieldset {
+        label {
+            display: none;
+        }
+
+        input,
+        textarea,
+        select {
+            -webkit-appearance: none;
+            vertical-align: middle;
+            outline: none;
+            @include border-radius(0);
+            @include box-sizing(border-box);
+            @include transition(all, .25s, ease-in);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="search"],
+        input[type="url"],
+        input[type="tel"],
+        textarea {
+            padding: 18px 36px;
+            width: 100%;
+            font-family: $font-body;
+            @include font-size(2.4);
+            border: none;
+            background: #ccc;
+            color: $colour-alpha;
+
+            &:hover,
+            &:focus {
+                background: #ddd;
+            }
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            float: right;
+            padding: 18px 36px;
+            border: none;
+            font-family: $font-body;
+            @include font-size(2.4);
+            color: $colour-alpha;
+            background: #888;
+
+            &:hover,
+            &:active {
+                background: #777;
+            }
+        }
+
+        select {
+            -webkit-appearance: none;
+            @include border-radius(0);
+        }
+
+        textarea {
+            overflow: auto;
+            resize: vertical;
+            vertical-align: top;
+        }
+    }
+}
+
+@include input-placeholder-colour(#666);
+
+
+/* ==========================================================================
+    Wrappers
+   ========================================================================== */
+
+.wrap {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 960px;
+    @include box-sizing(border-box);
+}
+
+
+/* ==========================================================================
+    The Header
+   ========================================================================== */
+
+.header {
+    margin: 0 auto;
+
+    h1,
+    h2 {
+        margin: 0;
+    }
+
+    .site-title {
+        a {
+            color: $colour-beta;
+
+            &:hover {
+                @include opacity(8);
+            }
+        }
+    }
+
+    .main-navigation {
+        margin-bottom: 2.5rem;
+        border-bottom: 1px solid #ccc;
+
+        li {
+            display: inline-block;
+            margin-left: 3.5rem;
+
+            a {
+                display: inline-block;
+                padding: 1.2rem 0;
+                font-family: $font-title;
+                @include font-size(2.2);
+                color: $colour-alpha;
+
+                &:hover {
+                    color: $colour-hover;
+                }
+
+                &.active {
+                    color: $colour-links;
+                }
+            }
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+    Content
+   ========================================================================== */
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================================
+    The Footer
+   ========================================================================== */
+
+.footer {
+    margin: 0 auto;
+    color: #bbb;
+}
